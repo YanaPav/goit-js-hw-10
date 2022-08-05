@@ -9,7 +9,6 @@ const input = document.querySelector('#search-box')
 const countryListEl = document.querySelector('.country-list')
 const countryInfoEl = document.querySelector('.country-info')
 
-
 input.addEventListener('input', debounce(onInputType, DEBOUNCE_DELAY))
 
 function onInputType(e) {
