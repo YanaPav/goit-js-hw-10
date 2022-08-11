@@ -34,8 +34,12 @@ function onInputType(e) {
             countryListMarkup(data)
         }           
         })
-        .catch(error => {   
+        .catch(error => {             
             clearMarkup()
+
+            if (error.toString().includes("Not Found")) {
+                Notiflix.Notify.failure('Oops, there is no country with that name')
+            }
             console.log(error)
         })
 }
